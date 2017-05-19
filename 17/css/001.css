@@ -1,0 +1,54 @@
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+ul{
+	padding: 0;
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+body{
+	background: url(../img/pexels-photo-165818.jpeg) no-repeat fixed;
+	min-height: 1200px;
+	color: #fff;
+}
+.w{
+	max-width: 1200px;
+	padding: 20px;
+	margin: auto;
+}
+header{
+	position: relative;
+	margin: 30px 0px;
+}
+.logo h1{
+	display: none;
+}
+.logo img{
+	width: 80px;
+	height: auto;
+}
+.m{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.m ul li{
+	float: left;
+	margin: 20px 30px;
+}
+.m ul li a{
+	text-decoration: none;
+	color: #fff;
+	padding: 20px;
+	border: 1px solid transparent;
+	transition: color .5s,border .5s;
+}
+.m ul li a:hover{
+	color: skyblue;
+	border: 1px solid #fff;
+}
