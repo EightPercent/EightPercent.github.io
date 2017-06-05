@@ -125,8 +125,8 @@ header .logo span{
 	margin-right: 90px;
 }
 .about .note p{
-	margin: 0px;
-	padding-bottom: 15px;
+	margin: 30px;
+	padding-bottom: 0px;
 }
 .about .note p:nth-last-of-type(1){
 	padding: 0px 0px;
