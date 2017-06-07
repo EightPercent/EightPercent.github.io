@@ -141,8 +141,8 @@ header .logo span{
 	color: #000000;
 }
 .service{
-	min-height: 600px;
-	background: url(../img/desktop.jpg) center center no-repeat;
+	min-height: 700px;
+	background: url(../img/pexels-photo-185374.jpeg) center center no-repeat;
 	background-size: cover;
 }
 .service li{
@@ -159,12 +159,12 @@ header .logo span{
 }
 .service h2{
 	color: #000;
-	margin-top: 80px;
+	padding: 80px;
 	text-align: center;
 	padding-bottom: 18px;
 }
 .service p{
-	color: #000;
+	color: grey;
 	margin-bottom: 90px;
 	text-align: center;
 }
