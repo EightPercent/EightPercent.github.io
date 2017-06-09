@@ -1,0 +1,329 @@
+*{
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+.clearfix::after{
+	clear: both;
+	display: block;
+	content: "";
+}
+ul{
+	margin-top: 20px;
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+.container{
+	max-width: 1200px;
+	margin: auto;
+}
+body{
+	min-height: 1400px;
+	font-family:"微软雅黑";
+}
+span{
+	font-family: 'Droid Serif', serif;
+}
+header{
+	width: 100%;
+	padding: 12px;
+	background-color: rgba(0,0,0,0);
+	position: fixed;
+	transition:background-color.5s,padding.5s;
+	z-index: 10;
+}
+header.on{
+	padding: 5px;
+	background-color: rgba(0,0,0,.8);
+	
+}
+header .logo{
+	float: left;
+}
+header .logo img{
+	display: inline-block;
+	vertical-align: middle;
+}
+header .topMenu{
+	float: right;
+}
+header .topMenu ul li{
+	float: left;
+	margin-right: 40px;
+}
+header .topMenu ul a{
+	text-shadow: 1px 1px 1px rgba(0,0,0,.2);
+}
+header .topMenu ul a:hover{
+	color: #339BEB;
+}
+header .logo span{
+	font-size: 3em;
+	vertical-align: middle;
+}
+.banner{
+	min-height: 800px;
+	background: url(../img/pexels-photo-197935.jpeg) no-repeat center top;
+	background-size: cover;
+}
+.cbanner{
+	color: #FFFFFF;
+	display: block;
+	position: absolute;
+	max-width: 800px;
+	height: 30px;
+	line-height: 30px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	margin: 260px auto;
+	text-align: center;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.8);
+} 
+.cbanner h2{
+	font-size: 2em;
+	margin-bottom: 30px;
+	margin-top: 80px;
+	font-family: sans-serif;
+}
+.cbanner h2 span{
+	color: #339BEB;
+}
+.cbanner p i{
+	font-style: normal;
+	color: #000;
+	padding: 5px 1px;
+    background-color:rgba(255,255,255,.5);
+    text-shadow: none;
+}
+.about{
+	min-height: 700px;
+}
+.about h2{
+	color: #000;
+	margin-top: 80px;
+	text-align: center;
+	padding-bottom: 18px;
+}
+.about p{
+	color: #000;
+	margin-bottom: 90px;
+	text-align: center;
+}
+.about img{
+	float: left;
+	width: 46%;
+	margin-bottom: 50px;
+	margin-left: 40px;
+}
+.about .note{ 
+	float: right;
+	margin-right: 90px;
+}
+.about .note p{
+	margin: 30px;
+	padding-bottom: 0px;
+}
+.about .note p:nth-last-of-type(1){
+	padding: 0px 0px;
+	margin-right: 440px;
+}
+.about .note li{
+	list-style: circle;
+	color: #000;
+	padding: 10px 0px;
+}
+.container li{
+	color: #000000;
+}
+.service{
+	min-height: 700px;
+	background: url(../img/pexels-photo-185374.jpeg) center center no-repeat;
+	background-size: cover;
+}
+.service li{
+	float: left;
+	width: 48%;
+	margin-right: 4%;
+	text-align: right;
+	cursor: pointer;
+}
+.service li::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.service h2{
+	color: #000;
+	padding: 80px;
+	text-align: center;
+	padding-bottom: 18px;
+}
+.service p{
+	color: grey;
+	margin-bottom: 90px;
+	text-align: center;
+}
+.service li p{
+	text-align: right;
+}
+.service li:nth-child(2n) p{
+	text-align: left;
+}
+.service li:nth-child(2n){
+	margin-right: 0px;
+	text-align: left;
+}
+.service li i{
+	float: right;
+	padding: 0px 0px 12px 20px;
+	transition: transform .5s,color .5s;
+}
+.service li:hover i{
+	transform: scale(1.2);
+	color: #339BEB;
+}
+.service li:nth-child(2n) i{
+	float: left;
+	padding: 0px 20px 12px 0px;
+}
+.service li h3{
+	display: inline-block;
+	margin: 0px;
+}
+.project h2{
+	color: #000;
+	margin-top: 80px;
+	text-align: center;
+	padding-bottom: 18px;}
+.project p{
+    color: #000000;
+	margin-bottom: 90px;
+	text-align: center;
+}
+.project figure{
+	float: left;
+	overflow: hidden;
+	width: 24%;
+	margin: 10px calc(4% / 3) 10px 0px;
+	position: relative;
+	cursor: pointer;
+}
+.project figure:nth-child(4n){
+	margin-right: 0px;
+}
+.project figure img{
+	width: 100%;
+	height: auto;
+	transform: scale(1) rotate(0deg);
+	transition: transform .5s;
+	vertical-align: top;
+}
+.project figure:hover img{
+	transform: scale(1.2) rotate(3deg);
+}
+.project figure figcaption{
+	position: absolute;
+	left: 5%;
+	right: 5%;
+	top: 50%;
+	bottom: 5%;
+	background-color: rgba(255,255,255,.8);
+	padding: 10px;
+}
+.project figure figcaption .time{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background-color:#339BEB;
+	font-size: 0.8em;
+	text-align: center;
+}
+.project figure figcaption .time .month{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+.project figure figcaption h3{
+	margin: 5px 0px 0px 70px;
+}
+.project figure figcaption p{
+	font-size: 0.8em;
+	line-height: 1.5;
+}
+.project figure figcaption .data{
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	font-size: 0.8em;
+	width: 100%;
+	height: 24px;
+	line-height: 24px;
+	background-color: rgba(0,0,0,.2);
+	text-align: right;
+}
+.project figure figcaption .data *{
+	padding: 0px 2px;
+}
+.contact{
+	min-height: 600px;
+	background: url(../img/82E58PICgsM_1024.jpg) no-repeat center;
+	background-size: cover;
+	color: #fff;
+}
+.contact h2{
+	color: #000;
+	margin-top: 80px;
+	text-align: center;
+	padding-bottom: 18px;}
+.contact p{
+    color: #000000;
+	margin-bottom: 90px;
+	text-align: center;
+}
+.contact li i{
+	padding: 0px 10px 0px 0px;
+}
+.contact .left{
+	width: 48%;
+	float: left;
+	margin-right: 4%;
+}
+.contact .left p{
+	margin-top: 0px;
+}
+.contact .right{
+	width: 45%;
+	float: right;
+	margin-right: 0%;
+}
+.contact .right input,
+.contact .right textarea
+{
+	background-color: rgba(255,255,255,.4);
+	color: #000;
+	margin: 10px;
+	width: 100%;
+	border: none;
+	outline: none;
+	font-size: 1.2em;
+	padding: 15px 16px;
+	border-radius: 10px;
+	font-size: 1.2em;
+	font-family: sans-serif;
+}
+
+::-webkit-input-placeholder{
+	color: #000000;
+}
+::-moz-placeholder{
+	color: #000000;
+}
+footer{
+	line-height: 1.5;
+	text-align: center;
+	color: #000000;
+	margin: 0px;
+}
