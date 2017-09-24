@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			
+			#a{
+				width: 500px;
+				height: 500px;
+				border: 1px solid rgba(0,0,0);
+			    border-collapse: collapse;
+			    
+			}
+			#tcr td{
+				border: 1px solid rgba(0,0,0);
+				height: 50px;
+				width: 50px;}
+		
+		</style>
+	</head>
+	<body>
+		<table id="a">
+			<tr>
+				<td>我爱前端</td>
+				<td>我爱前端</td>
+				<td>我爱前端</td>
+				<td>我爱前端</td>
+				<td>我爱前端</td>
+			</tr>
+			<tr>
+				<td>我爱前端</td>
+				<td>我爱前端</td>
+				<td>我爱前端</td>
+				<td>我爱前端</td>
+				<td>我爱前端</td>
+			</tr>
+			<tr>
+				<td>我爱前端</td>
+				<td>我爱前端</td>
+				<td>我爱前端</td>
+				<td>我爱前端</td>
+				<td>我爱前端</td>
+			</tr>
+			<tr>
+				<td>我爱前端</td>
+				<td>我爱前端</td>
+				<td>我爱前端</td>
+				<td>我爱前端</td>
+				<td>我爱前端</td>
+			</tr>
+			<tr>
+				<td>我爱前端</td>
+				<td>我爱前端</td>
+				<td>我爱前端</td>
+				<td>我爱前端</td>
+				<td>我爱前端</td>
+			</tr>
+			<tr>
+				<td>我爱前端</td>
+				<td>我爱前端</td>
+				<td>我爱前端</td>
+				<td>我爱前端</td>
+				<td>我爱前端</td>
+			</tr>
+			<tr>
+				<td>我爱前端</td>
+				<td>我爱前端</td>
+				<td>我爱前端</td>
+				<td>我爱前端</td>
+				<td>我爱前端</td>
+			</tr>
+			<tr>
+				<td>我爱前端</td>
+				<td>我爱前端</td>
+				<td>我爱前端</td>
+				<td>我爱前端</td>
+				<td>我爱前端</td>
+			</tr>
+		</table>
+	
+		<script type="text/javascript">
+			var oa=document.getElementById("a");
+			var otr=oa.getElementsByTagName("tr");
+			var otd=oa.getElementsByTagName("td");
+			for (i in otd) {
+				otd[i].style.background="hsla("+3*i+",90%,60%,.4)";
+			}
+		</script>
+	</body>
+</html>
