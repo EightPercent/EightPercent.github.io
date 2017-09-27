@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<div class="a">
+			<div class="input">
+				<input type="number" id="num"/>
+				<input type="button" id="guess" value="猜测" />
+				<input type="button" id="repeat" value="重来" />
+			</div>
+			<div class="b">
+				<div id="times">剩余次数：6<br /></div>
+				<div id="info">历史记录：<br /></div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var numB=Math.floor(Math.random()*9+1);
+			var oTimes=6;
+			var oStart=document.getElementById('guess');
+			var oNum=document.getElementById('num');
+			var oInfo1=document.getElementById('info');
+			var oInfo2=document.getElementById('times');
+			var oRe=document.getElementById('repeat');
+			oStart.addEventListener('click',clicked);
+			function clicked () {
+				n=parseInt(oNum.value);
+				oTimes--;
+				if (oTimes<0) {
+					oInfo1.innerHTML='次数用完了';
+				}else{
+					if(isNaN(n)) {
+						oInfo1.innerHTML+='请输入数字!';
+						oTimes++;
+					} else{	
+						if (n>=numB) {
+							if (n>numB) {
+								oInfo1.innerHTML='你的数字'+n+'有点大';
+								oInfo2.innerHTML='剩余次数：'+oTimes;
+							} else{
+								oInfo1.innerHTML='恭喜你猜对了！';
+								oInfo2.innerHTML='剩余次数：'+oTimes;
+							}
+						
+						} else{
+							console.log(n);
+							oInfo1.innerHTML='你的数字'+n+'有点小';
+							oInfo2.innerHTML='剩余次数：'+oTimes;
+						}
+					}
+					
+				}
+
+			}
+			oRe.addEventListener('click',re);
+			function re () {
+				oTimes=6;
+				numB=Math.floor(Math.random()*9+1);
+				oNum.value="";
+				oInfo1.innerHTML="历史纪录：";
+			}
+		</script>
+	</body>
+</html>
