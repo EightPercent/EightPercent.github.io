@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>抽奖</title>
+			<style type="text/css">
+		#a{
+			margin: 200px auto 0 auto;
+			text-align: center;
+			border: 1px solid black;
+			border-collapse:collapse ;
+		}
+		#a th{
+			border: 1px solid black;
+			width: 100px;
+			height: 50px;
+			text-align: center;
+		}
+		#a td{
+			border: 1px solid black;
+			width: 100px;
+			height: 50px;
+			text-align: center;
+		}
+		div{
+			width: 100px;
+			margin: auto;
+		}
+		#choujiang{
+			width: 100px;
+			height: 40px;
+			margin: 10px auto;
+			
+		}
+	</style>
+
+	</head>
+	<body>
+		<table id="a">
+			<tr><th>一等奖</th><td></td></tr>
+			<tr><th>二等奖</th><td></td></tr>			
+			<tr><th>三等奖</th><td></td></tr>
+		</table>
+		<div class="click">
+			<input type="button" name="choujiang" id="choujiang" value="抽奖"/>
+		</div>
+		<script type="text/javascript">
+			var oTd=document.querySelectorAll("#a td");
+			var oSj=new Array(5);
+			var oChoujiang=document.getElementById('choujiang');
+			oChoujiang.addEventListener("click",jiang);
+			function jiang () {
+				for (var i=0;i<6;i++) {
+				oSj[i]=Math.floor(Math.random()*44+1);
+				for(var j=0;j<i;j++){
+					if(oSj[i]==oSj[j]){
+						i--;
+						console.log(oSj[i]);
+						break;
+						
+					}
+				}
+				oTd[i].innerHTML=oSj[i];
+				}
+			}
+
+		</script>
+	</body>
+</html>
