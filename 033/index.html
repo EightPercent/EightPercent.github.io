@@ -1,61 +1,71 @@
-
-
 <!DOCTYPE html>
 <html>
 
 	<head>
 		<meta charset="utf-8" />
-		<title>tab选项卡</title>
+		<title></title>
+		<style type="text/css">
+			body {
+				min-height: 6000px;
+				margin: 0;
+			}
+			
+			#b {
+				width: 600px;
+				height: 300px;
+				margin-top: 200px;
+				margin-left: 450px;
+				background-color: blue;
+				position: absolute;
+				overflow: hidden;
+			}
+			
+			#c {
+				width: 100%;
+			}
+			
+			#a {
+				width: 100px;
+				height: 100px;
+				border: 1px solid;
+				border-radius: 100%;
+				position: absolute;
+				margin-top: -50px;
+				margin-left: -50px;
+				pointer-events: none;
+			}
+			
+			#d {
+				position: fixed;
+			}
+		</style>
 	</head>
-	<style type="text/css">
-		body {
-			margin: 0 auto;
-			text-align: center;
-		}
-		
-		input {
-			margin: 50px;
-		}
-		
-		div {
-			width: 200px;
-			height: 100px;
-			margin: auto;
-			display: none ;
-			line-height:50px;
-		}
-	</style>
 
 	<body>
-		<input type="button" id="1" value="1" />
-		<input type="button" id="2" value="2" />
-		<input type="button" id="3" value="3" />
-		<div id="1" style="background-color: yellow;">1</div>
-		<div id="2" style="background-color: red;">2</div>
-		<div id="3" style="background-color: blue;">3</div>
+		<div id="b">
+			<img src="img/102.jpg" id="c" />
+			<div id="a"></div>
+		</div>
+
+		<!--<input type="text" name="zhi" id="zhi" value="" />-->
 		<script type="text/javascript">
-			var obtns = document.querySelectorAll('input');
-			var ocont = document.querySelectorAll('div')
-
-			for(var i = 0; i < obtns.length; i++) {
-
-				obtns[i].addEventListener('click', (function(n) {
-
-					return function() {
-						for(var j = 0; j < obtns.length; j++) {
-							if(j == n) {
-								ocont[j].style.display = "block";
-							} else if(j < n) {
-								ocont[j].style.display = "none";
-							} else if(j > n) {
-								ocont[j].style.display = "none";
-							}
-						}
-						ocont[n].style.display = "block";
-					};
-				})(i));
-
-			}
+			var oA = document.getElementById("a");
+			var oB = document.getElementById("b");
+			var oD = document.getElementById("d");
+			var oC = document.getElementById("c");
+			var f;
+			oC.addEventListener("load", function() {
+				f = oC.naturalWidth / oC.width;
+				oA.style.backgroundImage = "url(" + oC.src + ")";
+			});
+			//			var rect=obj.getBoundingClientRect();
+			oB.addEventListener("mousemove", function() {
+				var x = event.offsetX;
+				var y = event.offsetY;
+				oA.style.left = x + "px";
+				oA.style.top = y + "px";
+				oA.style.backgroundPosition = (-f * x + 50) + "px " + (-f * y + 50) + "px";
+			});
 		</script>
 	</body>
 
